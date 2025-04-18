@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>🏴‍☠️ Mission X: Startseite</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #111;
+      color: #00ffcc;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      text-align: center;
+      margin: 0;
+    }
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+    p {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+      max-width: 500px;
+    }
+    a.button {
+      display: inline-block;
+      padding: 1rem 2rem;
+      font-size: 1.2rem;
+      color: #000;
+      background: #00ffcc;
+      border: none;
+      border-radius: 10px;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+    a.button:hover {
+      background: #00ddb2;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Willkommen bei <br>Mission X</h1>
+  <p>Ein geheimes Abenteuer beginnt... Bist du bereit, die erste Spur zu finden?<br><br>
+  Scanne den ersten QR-Code oder starte hier:</p>
+
+  <a class="button" href="level1.html">→ Starte Mission</a>
+
+</body>
+</html>
