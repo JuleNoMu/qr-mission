@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1 plus MathML 2.0//EN" "http://www.w3.org/Math/DTD/mathml2/xhtml-math11-f.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
+<!--This file was converted to xhtml by LibreOffice - see https://cgit.freedesktop.org/libreoffice/core/tree/filter/source/xslt for the code.-->
+
+<head profile="http://dublincore.org/documents/dcmi-terms/">
+<meta http-equiv="Content-Type" content="application/xhtml+xml; charset=utf-8"/>
+<title xml:lang="en-US">- no title specified</title>
+<meta name="DCTERMS.title" content="" xml:lang="en-US"/>
+
+<meta name="DCTERMS.language" content="en-US" scheme="DCTERMS.RFC4646"/>
+<meta name="DCTERMS.source" content="http://xml.openoffice.org/odf2xhtml"/>
+
+<meta name="DCTERMS.issued" content="2025-04-18T23:56:59.579819000" scheme="DCTERMS.W3CDTF"/>
+
+<meta name="DCTERMS.modified" content="2025-04-18T23:57:42.634165500" scheme="DCTERMS.W3CDTF"/>
+
+
+<meta name="xsl:vendor" content="libxslt"/>
+<link rel="schema.DC" href="http://purl.org/dc/elements/1.1/" hreflang="en"/>
+<link rel="schema.DCTERMS" href="http://purl.org/dc/terms/" hreflang="en"/>
+<link rel="schema.DCTYPE" href="http://purl.org/dc/dcmitype/" hreflang="en"/>
+<link rel="schema.DCAM" href="http://purl.org/dc/dcam/" hreflang="en"/>
+
+<style>
+    table { border-collapse:collapse; border-spacing:0; empty-cells:show }
+    td, th { vertical-align:top; font-size:12pt;}
+    h1, h2, h3, h4, h5, h6 { clear:both;}
+    ol, ul { margin:0; padding:0;}
+    li { list-style: none; margin:0; padding:0;}
+    span.footnodeNumber { padding-right:1em; }
+    span.annotation_style_by_filter { font-size:95%; font-family:Arial; background-color:#fff000;  margin:0; border:0; padding:0;  }
+    span.heading_numbering { margin-right: 0.8rem; }* { margin:0;}
+    .paragraph-Standard{ font-size:12pt; font-family:'Liberation Serif'; writing-mode:horizontal-tb; direction:ltr;}
+    /* ODF styles with no properties representable as CSS:
+     { } */
+</style>
+</head>
+
+<body dir="ltr" style="max-width:21.001cm;margin-top:2cm; margin-bottom:2cm; margin-left:2cm; margin-right:2cm; ">
+
+<p class="paragraph-Standard">&lt;!DOCTYPE html&gt;<br/>&lt;html lang="de"&gt;<br/>&lt;head&gt;<br/>  &lt;meta charset="UTF-8" /&gt;<br/>  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"/&gt;<br/>  &lt;title&gt;Gangsterjagd – QR-Level-Game&lt;/title&gt;<br/>  &lt;style&gt;<br/>    body {<br/>      font-family: sans-serif;<br/>      background: #111;<br/>      color: #0f0;<br/>      display: flex;<br/>      justify-content: center;<br/>      align-items: center;<br/>      height: 100vh;<br/>      margin: 0;<br/>      padding: 1em;<br/>      text-align: center;<br/>    }<br/><br/>    .level {<br/>      display: none;<br/>      flex-direction: column;<br/>      align-items: center;<br/>      justify-content: center;<br/>    }<br/><br/>    .active {<br/>      display: flex;<br/>    }<br/><br/>    h1 {<br/>      font-size: 2em;<br/>      animation: blink 1s infinite;<br/>    }<br/><br/>    @keyframes blink {<br/>      50% { opacity: 0.5; }<br/>    }<br/><br/>    .back {<br/>      margin-top: 2em;<br/>      color: #0ff;<br/>      cursor: pointer;<br/>      text-decoration: underline;<br/>    }<br/>  &lt;/style&gt;<br/>&lt;/head&gt;<br/>&lt;body&gt;<br/><br/>&lt;div id="level0" class="level active"&gt;<br/>  &lt;h1&gt;Start der Mission&lt;/h1&gt;<br/>  &lt;p&gt;Scanne den ersten QR-Code, um Level 1 zu betreten!&lt;/p&gt;<br/>&lt;/div&gt;<br/><br/>&lt;div id="level1" class="level"&gt;<br/>  &lt;h1&gt;Level 1&lt;/h1&gt;<br/>  &lt;p&gt;Gut gemacht! Du bist bereit für das nächste Rätsel.&lt;/p&gt;<br/>&lt;/div&gt;<br/><br/>&lt;div id="level2" class="level"&gt;<br/>  &lt;h1&gt;Level 2&lt;/h1&gt;<br/>  &lt;p&gt;Respekt! Die Mission geht weiter...&lt;/p&gt;<br/>&lt;/div&gt;<br/><br/>&lt;div id="level3" class="level"&gt;<br/>  &lt;h1&gt;Level 3&lt;/h1&gt;<br/>  &lt;p&gt;Fast geschafft. Noch ein Rätsel!&lt;/p&gt;<br/>&lt;/div&gt;<br/><br/>&lt;div id="level4" class="level"&gt;<br/>  &lt;h1&gt;Level 4&lt;/h1&gt;<br/>  &lt;p&gt;Letzte Challenge vor dem Schatz!&lt;/p&gt;<br/>&lt;/div&gt;<br/><br/>&lt;div id="level5" class="level"&gt;<br/>  &lt;h1&gt;🎉 Level 5 – Ziel erreicht!&lt;/h1&gt;<br/>  &lt;p&gt;Du hast alle QR-Codes gefunden. Öffne jetzt den Schatz!&lt;/p&gt;<br/>&lt;/div&gt;<br/><br/>&lt;script&gt;<br/>  // Lese den Hash aus der URL (z. B. #level2)<br/>  const hash = window.location.hash || "#level0";<br/><br/>  // Alle Level verstecken<br/>  document.querySelectorAll(".level").forEach(div =&gt; {<br/>    div.classList.remove("active");<br/>  });<br/><br/>  // Entsprechenden Abschnitt anzeigen<br/>  const current = document.querySelector(hash);<br/>  if (current) {<br/>    current.classList.add("active");<br/>  } else {<br/>    document.querySelector("#level0").classList.add("active");<br/>  }<br/>&lt;/script&gt;<br/><br/>&lt;/body&gt;<br/>&lt;/html&gt;<br/></p>
+</body>
+
+</html>
